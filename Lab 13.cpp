@@ -22,6 +22,7 @@ int main()
 
 	cout << "This program uses a Bubble Sort on a Vector of Integers \n";
 	cout << endl;
+
 	fillVector(vec);
 	bubbleSort(vec);
 
