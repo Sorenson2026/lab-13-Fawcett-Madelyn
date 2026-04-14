@@ -34,18 +34,15 @@ int main()
 void bubbleSort(vector<int>& vec)
 {
 	int n = vec.size();
-	bool swapped;
 
 	for (int pass = 0; pass < n - 1; pass++)
 	{
 		cout << "Pass # " << pass + 1;
-		swapped = false;
 		for (int i = 0; i < n - pass - 1; i++)
 		{
 			if (vec[i] > vec[i + 1])
 			{
 				swap(vec[i], vec[i + 1]);
-				swapped = true;
 			}
 
 		}
