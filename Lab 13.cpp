@@ -10,20 +10,20 @@
 using namespace std;
 
 //function prototypes ********************
-void bubbleSort(vector<int>& arr);
-void fillVector(vector<int>& arr);
+void bubbleSort(vector<int>& vec);
+void fillVector(vector<int>& vec);
 
 
 //main function to fill a vector and sort it using a bubble sort **********************
 int main()
 {
 
-	vector<int> arr(25);
+	vector<int> vec(25);
 
 	cout << "This program uses a Bubble Sort on a Vector of Integers \n";
 	cout << endl;
-	fillVector(arr);
-	bubbleSort(arr);
+	fillVector(vec);
+	bubbleSort(vec);
 
 
 
@@ -31,9 +31,9 @@ int main()
 }
 
 //bubble sort function ***************
-void bubbleSort(vector<int>& arr)
+void bubbleSort(vector<int>& vec)
 {
-	int n = arr.size();
+	int n = vec.size();
 	bool swapped;
 
 	for (int pass = 0; pass < n - 1; pass++)
@@ -42,14 +42,14 @@ void bubbleSort(vector<int>& arr)
 		swapped = false;
 		for (int i = 0; i < n - pass - 1; i++)
 		{
-			if (arr[i] > arr[i + 1])
+			if (vec[i] > vec[i + 1])
 			{
-				swap(arr[i], arr[i + 1]);
+				swap(vec[i], vec[i + 1]);
 				swapped = true;
 			}
 
 		}
-		for (int num : arr)
+		for (int num : vec)
 		{
 			cout << setw(3) << num;
 		}
@@ -60,14 +60,14 @@ void bubbleSort(vector<int>& arr)
 }
 
 //fill vector function **************
-void fillVector(vector<int>& arr)
+void fillVector(vector<int>& vec)
 {
 	cout << "Original:";
 	for (int i = 0; i < 25; ++i)
 	{
-		arr[i] = rand() % 100;
+		vec[i] = rand() % 100;
 	}
-	for (auto i : arr)
+	for (auto i : vec)
 	{
 		cout << setw(3) << i;
 	}
